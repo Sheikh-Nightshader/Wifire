@@ -30,6 +30,7 @@ sudo python3 wifire.py --interface wlan0 --duration 60 --output handshake.cap --
 If failed to change interface to monitor mode and you did it manually use this command.
 
 sudo python3 wifire.py --interface wlan0mon --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
+
 Walkthrough of the Process
 
 Step 1: Scan for Access PointsOnce the script is started, it will scan for Wi-Fi networks within range for the specified duration. During the scan, it will list available APs (Access Points) along with their SSIDs and BSSIDs.
