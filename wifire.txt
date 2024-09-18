@@ -39,7 +39,7 @@ sudo python3 wifire.py --interface <your_wifi_interface> [options]Required Argum
 Example Command: sudo python3 wifire.py --interface wlan0 --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
 
 If failed to change interface to monitor mode and needed to do so manually use this command.
-python3 wifire.py --interface wlan0mon --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
+sudo python3 wifire.py --interface wlan0mon --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
 
 Walkthrough of the Process
 
