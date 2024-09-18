@@ -37,6 +37,10 @@ Step 2: Run the ScriptUse the following command to run the script, providing the
 sudo python3 wifire.py --interface <your_wifi_interface> [options]Required Argument--interface: The Wi-Fi interface you wish to use (e.g., wlan0).Optional Arguments--duration: Duration (in seconds) for the initial scanning phase. Default is 60 seconds.--output: Name of the .cap file where the captured handshakes will be stored. Default is handshake.cap.--hashfile: Name of the text file where the WPA/WPA2 hashes will be saved. Default is wpa_hash.txt.--deauth: Number of deauth packets to send per target. Default is 10.--capture_duration: Duration (in seconds) for capturing handshakes after the deauth attack. Default is 30 seconds.
 
 Example Command: sudo python3 wifire.py --interface wlan0 --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
+
+If failed to change interface to monitor mode and needed to do so manually use this command.
+python3 wifire.py --interface wlan0mon --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
+
 Walkthrough of the Process
 
 Step 1: Scan for Access PointsOnce the script is started, it will scan for Wi-Fi networks within range for the specified duration. During the scan, it will list available APs (Access Points) along with their SSIDs and BSSIDs.
