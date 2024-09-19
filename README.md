@@ -13,7 +13,9 @@ Introduction
 Operating
 System: Linux-based system (Kali Linux preferred for Wi-Fi pentesting).
 
-Python3: Ensure Python3 and Scapy library are installed:sudo apt-get install python3-pippip3 install scapyWi-Fi Interface: Use a Wi-Fi adapter that supports monitor mode and packet injection.
+Python3: Ensure Python3 and Scapy library are installed:
+
+sudo apt-get install python3-pippip3 install scapyWi-Fi Interface: Use a Wi-Fi adapter that supports monitor mode and packet injection.
 
 Root Privileges: Run the script with root privileges (sudo).
 
@@ -28,20 +30,21 @@ Example Command:
 sudo python3 wifire.py --interface wlan0 --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
 
 If failed to change interface to monitor mode and you did it manually use this command.
-
+airmon-ng start wlan0
+and run.
 sudo python3 wifire.py --interface wlan0mon --duration 60 --output handshake.cap --hashfile wpa_hash.txt --deauth 20 --capture_duration 30
 
 Walkthrough of the Process
 
 Step 1: Scan for Access PointsOnce the script is started, it will scan for Wi-Fi networks within range for the specified duration. During the scan, it will list available APs (Access Points) along with their SSIDs and BSSIDs.
 
-Step 2: Select Access PointAfter the scan completes, you'll be asked to select an Access Point (AP) by entering the corresponding number from the displayed list.
+Step 2: Select Access Point After the scan completes, you'll be asked to select an Access Point (AP) by entering the corresponding number from the displayed list.
 
 Step 3: Enter Target MAC AddressNext, enter the MAC address of the client device you want to deauthenticate from the selected Access Point. This can be obtained through various network monitoring tools or during the scan.
 
-Step 4: Deauth Attack and Capture HandshakesThe script will initiate a deauthentication attack on the selected AP and target client, disrupting their connection. Simultaneously, the script will capture WPA/WPA2 handshakes and save them in the .cap file specified.Step 5: Save WPA/WPA2 HashesAfter the attack, the script extracts the WPA/WPA2 handshake hash and saves it in the text file specified (wpa_hash.txt).
+Step 4: Deauth Attack and Capture Handshakes The script will initiate a deauthentication attack on the selected AP and target client, disrupting their connection. Simultaneously, the script will capture WPA/WPA2 handshakes and save them in the .cap file specified.Step 5: Save WPA/WPA2 HashesAfter the attack, the script extracts the WPA/WPA2 handshake hash and saves it in the text file specified (wpa_hash.txt).
 
-Output Files.cap File: Stores the captured WPA/WPA2 handshakes..txt File: Stores extracted WPA/WPA2 hashes from the handshakes for further analysis.
+Output Files.cap File: Stores the captured WPA/WPA2 handshakes.txt File: Stores extracted WPA/WPA2 hashes from the handshakes for further analysis.
 
 Notes
 
