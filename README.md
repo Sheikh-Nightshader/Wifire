@@ -16,7 +16,9 @@ System: Linux-based system (Kali Linux preferred for Wi-Fi pentesting).
 
 Python3: Ensure Python3 and Scapy library are installed:
 
-sudo apt-get install python3-pippip3 install scapyWi-Fi Interface: Use a Wi-Fi adapter that supports monitor mode and packet injection.
+sudo apt-get install python3-pippip3 install scapy
+
+Wi-Fi Interface: Use a Wi-Fi adapter that supports monitor mode and packet injection.
 
 Root Privileges: Run the script with root privileges (sudo).
 
