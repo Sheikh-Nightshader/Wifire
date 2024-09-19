@@ -8,6 +8,7 @@
 Wifire: Automated Wi-Fi Scanner and Attacker 
 
 Introduction
+
  Wifire is a Python-based tool that enables Wi-Fi network scanning, deauthentication attacks, and WPA/WPA2 handshake capture. It captures WPA/WPA2 handshakes and extracts hashes for further analysis.PrerequisitesBefore using Wifire, ensure the following prerequisites are met:
 
 Operating
